@@ -1,0 +1,11 @@
+{
+  "name": "stylisticscroll",
+  "version": "1.0.0",
+  "description": "Stylistic scroll is a simple plugin to solve the shenanigans of akward scroll in otherwise nice looking web pages ",
+  "main": "index.js",
+  "scripts": {
+    "test": "style"
+  },
+  "author": "",
+  "license": "ISC"
+}
