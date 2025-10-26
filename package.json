@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/TADSTech/stylisticscroll/issues"
   },
-  "homepage": "https://github.com/TADSTech/stylisticscroll#readme",
+  "homepage": "https://tadstech.github.io/stylisticscroll",
   "files": [
     "index.js",
     "react.js",

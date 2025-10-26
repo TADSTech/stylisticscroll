@@ -551,6 +551,7 @@ ISC License - see LICENSE file
 ## Links
 
 - Repository: https://github.com/TADSTech/stylisticscroll
+-Website: https://tadstech.github.io/stylisticscroll/
 - Issues: https://github.com/TADSTech/stylisticscroll/issues
 - npm: https://www.npmjs.com/package/stylisticscroll
 
