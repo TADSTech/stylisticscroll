@@ -1,0 +1,16 @@
+# Exclude from npm package
+examples/
+test/
+.gitignore
+.npmignore
+CHANGELOG.md
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

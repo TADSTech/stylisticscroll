@@ -1,11 +1,58 @@
 {
   "name": "stylisticscroll",
   "version": "1.0.0",
-  "description": "Stylistic scroll is a simple plugin to solve the shenanigans of akward scroll in otherwise nice looking web pages ",
+  "description": "Customizable transparent scrollbar styles with support for vanilla JavaScript and React. Make your scrollbars beautiful with any color!",
   "main": "index.js",
   "scripts": {
-    "test": "style"
+    "test": "node test/script.js"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TADSTech/stylisticscroll.git"
+  },
+  "keywords": [
+    "scrollbar",
+    "scroll",
+    "css",
+    "styling",
+    "react",
+    "vanilla-js",
+    "transparent",
+    "customizable",
+    "ui",
+    "ux",
+    "design",
+    "theme",
+    "color",
+    "webkit",
+    "browser"
+  ],
+  "author": "TADS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TADSTech/stylisticscroll/issues"
+  },
+  "homepage": "https://github.com/TADSTech/stylisticscroll#readme",
+  "files": [
+    "index.js",
+    "react.js",
+    "browser.js",
+    "index.d.ts",
+    "react.d.ts",
+    "index.html",
+    "styles.css",
+    "README.md"
+  ],
+  "browser": "browser.js",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
 }

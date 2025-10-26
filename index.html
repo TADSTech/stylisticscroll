@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StylisticScroll - Custom Scrollbar Styling</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>StylisticScroll</h1>
+      <p class="tagline">Custom scrollbar styling for web projects</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>What is this?</h2>
+      <p>A JavaScript library that lets you customize or hide scrollbars in your web pages. Works with plain HTML, React, and any JavaScript framework.</p>
+    </section>
+
+    <section class="demo">
+      <h2>Interactive Demo</h2>
+      <p>Click the buttons below to change the scrollbar style on this page:</p>
+      
+      <div class="button-group">
+        <button class="btn" onclick="applyStyle('red')">Red Scrollbar</button>
+        <button class="btn" onclick="applyStyle('black')">Black Scrollbar</button>
+        <button class="btn" onclick="applyStyle('white')">White Scrollbar</button>
+        <button class="btn" onclick="applyStyle('hide')">Hide Scrollbar</button>
+        <button class="btn btn-secondary" onclick="applyStyle('reset')">Reset to Default</button>
+      </div>
+
+      <div class="demo-box" id="scrollbox">
+        <h3>Scrollable Box</h3>
+        <p>This box has its own custom scrollbar. Try scrolling inside it!</p>
+        <p>StylisticScroll works by injecting CSS that targets scrollbar elements across different browsers.</p>
+        <p>It handles Chrome, Safari, Edge, Firefox, and other modern browsers automatically.</p>
+        <p>You can customize the color, width, opacity, and even completely hide the scrollbar.</p>
+        <p>The scrollbar can have different styles on different elements on the same page.</p>
+        <p>Hover over the scrollbar to see the opacity change effect.</p>
+        <p>This demo shows how flexible and easy to use StylisticScroll is.</p>
+        <p>Keep scrolling to see more content and test the scrollbar behavior.</p>
+        <p>The library is lightweight with zero dependencies for vanilla JavaScript.</p>
+        <p>React support is available with custom hooks and components.</p>
+        <p>You can use it with TypeScript thanks to included type definitions.</p>
+        <p>Installation takes less than a minute with npm</p>
+      </div>
+    </section>
+
+    <section class="installation">
+      <h2>Installation</h2>
+      
+      <div class="install-step">
+        <h3>Step 1: Install the package</h3>
+        <div class="code-block">
+          <code>npm install stylisticscroll</code>
+        </div>
+      </div>
+
+      <div class="install-step">
+        <h3>Step 2: Use in your project</h3>
+        
+        <h4>For HTML (no build tool needed)</h4>
+        <div class="code-block">
+          <code>&lt;script src="node_modules/stylisticscroll/browser.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  stylisticScroll({ color: '#ff0000' });
+&lt;/script&gt;</code>
+        </div>
+
+        <h4>For JavaScript projects (with bundler)</h4>
+        <div class="code-block">
+          <code>const stylisticScroll = require('stylisticscroll');
+
+stylisticScroll({ color: '#ff0000' });</code>
+        </div>
+
+        <h4>For React</h4>
+        <div class="code-block">
+          <code>import { useScrollbarStyles } from 'stylisticscroll/react';
+
+function App() {
+  useScrollbarStyles({ color: '#ff0000' });
+  return &lt;div&gt;Your content&lt;/div&gt;;
+}</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="options">
+      <h2>Configuration Options</h2>
+      
+      <table class="options-table">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>What it does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>color</code></td>
+            <td>string</td>
+            <td>'#6366f1'</td>
+            <td>Color of the scrollbar</td>
+          </tr>
+          <tr>
+            <td><code>width</code></td>
+            <td>string</td>
+            <td>'8px'</td>
+            <td>Width of the scrollbar</td>
+          </tr>
+          <tr>
+            <td><code>thumbRadius</code></td>
+            <td>string</td>
+            <td>'10px'</td>
+            <td>Border radius (roundness)</td>
+          </tr>
+          <tr>
+            <td><code>thumbOpacity</code></td>
+            <td>number</td>
+            <td>0.6</td>
+            <td>Transparency (0 to 1)</td>
+          </tr>
+          <tr>
+            <td><code>thumbHoverOpacity</code></td>
+            <td>number</td>
+            <td>0.9</td>
+            <td>Transparency when hovering</td>
+          </tr>
+          <tr>
+            <td><code>hideScrollbar</code></td>
+            <td>boolean</td>
+            <td>false</td>
+            <td>Completely hide scrollbar</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="examples">
+      <h2>Code Examples</h2>
+
+      <div class="example-block">
+        <h3>Change scrollbar color</h3>
+        <div class="code-block">
+          <code>stylisticScroll({ color: '#ff0000' });</code>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3>Make it wider and more visible</h3>
+        <div class="code-block">
+          <code>stylisticScroll({ 
+  color: '#000000',
+  width: '12px',
+  thumbOpacity: 0.8
+});</code>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3>Hide scrollbar completely</h3>
+        <div class="code-block">
+          <code>stylisticScroll({ hideScrollbar: true });</code>
+        </div>
+      </div>
+
+      <div class="example-block">
+        <h3>Style a specific element</h3>
+        <div class="code-block">
+          <code>applyScrollbarStylesToElement('#my-div', {
+  color: '#ff0000',
+  width: '10px'
+});</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>You call the function</h3>
+          <p>Pass in your color and style preferences as options.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>CSS is generated</h3>
+          <p>The library creates browser-specific CSS for scrollbar styling.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Styles are applied</h3>
+          <p>A style tag is injected into your page with the custom scrollbar CSS.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Cross-browser support</h3>
+          <p>Works automatically on Chrome, Safari, Edge, Firefox, and Opera.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Features</h2>
+      
+      <div class="features-grid">
+        <div class="feature">
+          <h3>No Dependencies</h3>
+          <p>Works standalone without requiring any other libraries.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>Tiny Size</h3>
+          <p>Lightweight code that loads fast and runs efficiently.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>TypeScript Support</h3>
+          <p>Includes type definitions for TypeScript projects.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>React Ready</h3>
+          <p>Built-in hooks and components for React applications.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>Easy Cleanup</h3>
+          <p>Returns a function to remove styles when needed.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>Browser Compatible</h3>
+          <p>Supports all modern browsers automatically.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>StylisticScroll &copy; 2025 TADS</p>
+      <p>
+        <a href="https://github.com/TADSTech/stylisticscroll" target="_blank">GitHub</a> |
+        <a href="https://www.npmjs.com/package/stylisticscroll" target="_blank">npm</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="browser.js"></script>
+  <script>
+    var currentCleanup = null;
+
+    currentCleanup = stylisticScroll({
+      color: '#ff0000',
+      width: '10px',
+      thumbOpacity: 0.7,
+      thumbHoverOpacity: 1.0
+    });
+
+    applyScrollbarStylesToElement('#scrollbox', {
+      color: '#000000',
+      width: '8px',
+      thumbOpacity: 0.6,
+      thumbHoverOpacity: 0.9
+    });
+
+    function applyStyle(type) {
+      if (currentCleanup) {
+        currentCleanup();
+      }
+
+      switch(type) {
+        case 'red':
+          currentCleanup = stylisticScroll({
+            color: '#ff0000',
+            width: '10px',
+            thumbOpacity: 0.7,
+            thumbHoverOpacity: 1.0
+          });
+          break;
+        case 'black':
+          currentCleanup = stylisticScroll({
+            color: '#000000',
+            width: '10px',
+            thumbOpacity: 0.6,
+            thumbHoverOpacity: 0.9
+          });
+          break;
+        case 'white':
+          currentCleanup = stylisticScroll({
+            color: '#ffffff',
+            width: '10px',
+            thumbOpacity: 0.5,
+            thumbHoverOpacity: 0.8
+          });
+          break;
+        case 'hide':
+          currentCleanup = stylisticScroll({
+            hideScrollbar: true
+          });
+          break;
+        case 'reset':
+          currentCleanup = stylisticScroll({
+            color: '#ff0000',
+            width: '10px',
+            thumbOpacity: 0.7,
+            thumbHoverOpacity: 1.0
+          });
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
